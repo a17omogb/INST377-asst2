@@ -8,7 +8,7 @@ console.log(data);
 function matchFinding(word, data_param){
     return data_param.filter(item => {
         const reword = new RegExp(word, 'gi');
-        return item.city.match(reword) || item.category.match(reword)
+        return item.city.match(reword) || item.category.match(reword) || item.zip.match(reword);
     });
 }
 
@@ -17,14 +17,17 @@ function displayMatches(){
     const res = matcharray.map(item => {
         return `
             <li>
-                <span class = "name"> ${item.name}, ${item.category}</span>
+                <span class = "name">Name: ${item.name}</span>
+                <span class = "category">Category: ${item.category}</span>
+                <span class="address">Address: ${item.address_line_1}, ${item.city}, ${item.state} ${item.zip}
             </li>
         `;
     });
     console.log(matcharray);
+    suggestions.innerHTML = res;
 }
 
 const searchInput = document.querySelector('.textentry');
-
+const suggestions = document.querySelector('.flex-outer');
 
 searchInput.addEventListener('keyup', displayMatches);
