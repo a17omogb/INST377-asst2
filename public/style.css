@@ -12,6 +12,8 @@ body {
   .container {
     min-height: 100%;
   }
+
+  
   
   .header {
     color: #fff;
@@ -97,4 +99,23 @@ body {
     flex-wrap: nowrap;
     border-radius: 4px;
   }
+
+  .textentry{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 650px;
+  }
   
+  .list_cont{
+    margin: 25px 45px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    background-color: rgb(61, 228, 61);
+    padding: 20px;
+    flex: 0 2 auto;
+  }
