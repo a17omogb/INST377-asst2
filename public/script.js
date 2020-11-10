@@ -31,3 +31,4 @@ const searchInput = document.querySelector('.textentry');
 const suggestions = document.querySelector('.flex-outer');
 
 searchInput.addEventListener('keyup', displayMatches);
+
