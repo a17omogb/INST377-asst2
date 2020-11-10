@@ -20,4 +20,7 @@ function displayMatches(){
 const searchInput = document.querySelector('.search');
 
 
+
+document.body.addEventListener('keyup', displayMatches);
+=======
 document.body.addEventListener('keyup', displayMatches);
