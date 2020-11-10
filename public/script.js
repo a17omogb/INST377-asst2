@@ -14,10 +14,17 @@ function matchFinding(word, data_param){
 
 function displayMatches(){
     const matcharray = matchFinding(this.value, data);
+    const res = matcharray.map(item => {
+        return `
+            <li>
+                <span class = "name"> ${item.name}, ${item.category}</span>
+            </li>
+        `;
+    });
     console.log(matcharray);
 }
 
-const searchInput = document.querySelector('.search');
+const searchInput = document.querySelector('.textentry');
 
 
-document.body.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
